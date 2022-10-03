@@ -1,5 +1,5 @@
 :root {                                         /* Using :root allows for highest CSS level selector*/
-    --variable-color: blue;                   /* Created a variable for a specific color. */
+    --variable-color1: blue;                   /* Created a variable for a specific color. */
     --variable-color2: green;
 }
 
@@ -11,7 +11,7 @@
     width: 100px;
     height: 100px;
     color: white;
-    background-color: var(--variable-color);    /* Used variable by assigning => var(--variable-name) */
+    background-color: var(--variable-color1);    /* Used variable by assigning => var(--variable-name) */
 }
 
 .variable-color-example2 {
@@ -19,9 +19,28 @@
     height: 100px;
     color: white;
     background: linear-gradient(                /* Gradients in CSS used with background property 
-                                                    => gradient-type( color1, color2) */
-                    var(--variable-color),
+                                                    => gradient-type( color1, color2, ..., colorN), adding n% option allows to specify where you want a gradient transition to complete */
+                    var(--variable-color1),
+                    yellow 60%,
                     var(--variable-color2)
+                );
+}
+
+.variable-color-example3 {
+    width: 100px;
+    height: 100px;
+    color: white;
+    background: linear-gradient(                /* Making a solid line w/Gradients in CSS used with background property 
+                                                    => linear-gradient(
+                                                            var(--first-color) 0%,
+                                                            var(--first-color) 40%,
+                                                            var(--second-color) 40%,
+                                                            var(--second-color) 80%
+                                                        ); */
+                    var(--variable-color1) 0%,
+                    var(--variable-color1) 20%,
+                    var(--variable-color2) 20%,
+                    var(--variable-color2) 40%
                 );
 }
 
