@@ -1,0 +1,8 @@
+:root {                                               /* Using :root allows for highest CSS level selector*/
+    --variable-color: blue;                         /* Created a variable for a specific color. */
+    
+}
+
+.variable-color-example {
+    background-color: var(--variable-color);          /* Used variable by assigning => var(--variable-name) */
+}
