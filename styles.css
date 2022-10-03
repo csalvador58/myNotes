@@ -1,8 +1,9 @@
-:root {                                                 /* Using :root allows for highest CSS level selector*/
-    --variable-color: blue;                           /* Created a variable for a specific color. */
+:root {                                         /* Using :root allows for highest CSS level selector*/
+    --variable-color: blue;                   /* Created a variable for a specific color. */
+    --variable-color2: green;
 }
 
-#div-1 .selector-example-div1-a {                       /* selector targeting a nested div */
+#div-1 .selector-example-div1-a {               /* selector targeting a nested div */
     color:blueviolet;
 }
 
@@ -10,7 +11,18 @@
     width: 100px;
     height: 100px;
     color: white;
-    background-color: var(--variable-color);            /* Used variable by assigning => var(--variable-name) */
+    background-color: var(--variable-color);    /* Used variable by assigning => var(--variable-name) */
+}
+
+.variable-color-example2 {
+    width: 100px;
+    height: 100px;
+    color: white;
+    background: linear-gradient(                /* Gradients in CSS used with background property 
+                                                    => gradient-type( color1, color2) */
+                    var(--variable-color),
+                    var(--variable-color2)
+                );
 }
 
 body {
@@ -25,4 +37,8 @@ section {
     height: 25%;
     margin: 10px;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
+
