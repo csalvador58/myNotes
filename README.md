@@ -1,2 +1,2 @@
 # myNotes
-My compiled notes
+My compiled notes from my coding journey.
